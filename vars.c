@@ -1,13 +1,16 @@
 #include "shell.h"
 
 /**
- * a is_chain - it tests if current char in buffer is a chain delimeter
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: ana address of current position in buf
+ * is_chain - function it will tests, if current char in buffer a chain delimeter
+ * @info: the parameter of thee struct
  *
- * Return: 1 if chain delimeter and  0 otherwise
+ * @buf: the char buffer
+ * @p: ana address of current pos of in buf
+ *
+ * Return: 1 if chain delimeter and  0 faill
  */
+
+
 int is_chain(info_t *info, char *buf, size_t *p)
 {
 	size_t j = *p;
@@ -36,15 +39,19 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * the check_chain - it checks we should continue chaining based on last status
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: the address of current position in buf
- * @i: a starting position in buf
- * @len: the length of buf
+ * check_chain - it checks what we should continue chaining based on last status.
  *
- * Return: Void
+ * @info: the parameter struct
+ * @buf: the char buff
+ *
+ * @p: the address of current pos in buf
+ * @i: a starting position in buf
+ * @len: the length of buffer count for
+ *
+ * Return: will get a Void
  */
+
+
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
@@ -70,11 +77,13 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * the replace_alias - it replaces an aliases in the tokenized string
- * @info: the parameter struct
+ * replace_alias - functionn it replaces an aliases in the tokenized string
+ * @info: the parameter of struct
  *
- * Return: a 1 if replaced and 0 otherwise
+ * Return: a 1 if replaced and 0 otherwise or faill
  */
+
+
 int replace_alias(info_t *info)
 {
 	int i;
@@ -99,11 +108,13 @@ int replace_alias(info_t *info)
 }
 
 /**
- * the replace_vars - it replaces vars in the tokenized string
- * @info: the parameter struct
+ * replace_vars - function it replaces vars in the tokenized string
+ * @info: the parameter of our struct
  *
- * Return: a 1 if replaced and 0 otherwise
+ * Return: a 1 if replaced and 0 faill or otherwise
  */
+
+
 int replace_vars(info_t *info)
 {
 	int i = 0;
@@ -140,12 +151,14 @@ int replace_vars(info_t *info)
 }
 
 /**
- * the replace_string - it replaces string
- * @old: an address of old string
- * @new: a new string
+ * replace_string - function will git it replaces string
+ * @old: an address of old the string
+ * @new: a new string we need
  *
- * Return: 1 if replaced, 0 otherwise
+ * Return: 1 if replaced, 0 otherwise or faill
  */
+
+
 int replace_string(char **old, char *new)
 {
 	free(*old);
